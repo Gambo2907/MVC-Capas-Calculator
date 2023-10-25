@@ -127,7 +127,7 @@ public class Modelo {
 	
 	
 	public void LeerArchivoDeTexto() {
-		String nombreArchivo = "C:\\Users\\User\\eclipse-workspace\\Modelado_CalculadoraMVC_Capas\\src\\mvc\\Bitacora.txt";
+		String nombreArchivo = "C:\\Users\\User\\Documents\\GitHub\\MVC-Capas-Calculator\\Modelado_CalculadoraMVC_Capas\\src\\mvc\\Bitacora.txt";
 		try {
             File archivo = new File(nombreArchivo);
             FileReader lector = new FileReader(archivo);
@@ -145,8 +145,8 @@ public class Modelo {
             buffer.close();
 
             contenidoComoString = contenido.toString();
-            System.out.print("Contenido del archivo:");
-            System.out.print(contenidoComoString);
+            System.out.println("Contenido del archivo:");
+            System.out.println(contenidoComoString);
         } catch (IOException e) {
             e.printStackTrace();
         }
