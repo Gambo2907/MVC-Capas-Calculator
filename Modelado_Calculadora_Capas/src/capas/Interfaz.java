@@ -95,6 +95,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		logica.primo = false;
+		    		logica.memorias = false;
 		    		if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
 		        		logica.cadena = "";
 		        		txtPantalla.setText("");
@@ -104,6 +105,7 @@ public class Interfaz extends JFrame {
 		                   logica.binario = false;
 		           		 	logica.primo = false;
 		           		 	logica.resultados = false;
+		           		    logica.memorias = false;
 		                   txtPantalla.requestFocus();
 		        	}
 		    		
@@ -117,6 +119,9 @@ public class Interfaz extends JFrame {
 		        		logica.oper = "multiplicacion";
 		        		logica.punto = false;
 		        		logica.resultados = false;
+		        		logica.binario = true;
+		        		logica.primo = true;
+		        		logica.memorias = true;
 		        		//logica.activado = false;
 		        		}
 		        }else if (keyChar == '+') {
@@ -129,6 +134,9 @@ public class Interfaz extends JFrame {
 		        		logica.oper = "suma";
 		        		logica.punto = false;
 		        		logica.resultados = false;
+		        		logica.binario = true;
+		        		logica.primo = true;
+		        		logica.memorias = true;
 		        	
 		        		}
 		        }else if (keyChar == '-') {
@@ -141,6 +149,9 @@ public class Interfaz extends JFrame {
 		        		logica.oper = "resta";
 		        		logica.punto = false;
 		        		logica.resultados = false;
+		        		logica.binario = true;
+		        		logica.primo = true;
+		        		logica.memorias = true;
 		        		
 		        		}
 		        }else if (keyChar == '/') {
@@ -153,6 +164,9 @@ public class Interfaz extends JFrame {
 		        		logica.oper = "division";
 		        		logica.punto = false;
 		        		logica.resultados = false;
+		        		logica.binario = true;
+		        		logica.primo = true;
+		        		logica.memorias = true;
 		        		
 		        		}
 		        } else if(keyChar == '.') {
@@ -184,6 +198,9 @@ public class Interfaz extends JFrame {
 		        			logica.bitacora.add(logica.resultadoBitacora);
 		        			Logica.escribirBitacora(logica.bitacora);
 		        			logica.resultados = true;
+		        			logica.binario = false;
+			        		logica.primo = false;
+			        		logica.memorias = false;
 		        			
 		        		}else if(logica.oper == "suma") {
 		        			logica.num2 = Double.parseDouble(logica.cadena);
@@ -359,7 +376,8 @@ public class Interfaz extends JFrame {
 		            txtPantalla.setText(logica.cadena);
 		            logica.activado = true;
 		            logica.binario = false;
-		    		   logica.primo = false;
+		    		logica.primo = false;
+		    		logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -371,6 +389,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -389,6 +408,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -400,6 +420,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -429,6 +450,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -447,6 +469,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -458,6 +481,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -476,6 +500,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -487,6 +512,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -505,6 +531,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -516,6 +543,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -534,6 +562,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -545,6 +574,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -563,6 +593,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -574,6 +605,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -592,6 +624,7 @@ public class Interfaz extends JFrame {
 		            logica.activado = true;
 		            logica.binario = false;
 		    		   logica.primo = false;
+		    		   logica.memorias = false;
 		            txtPantalla.requestFocus();
 		     	
 			     	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -603,6 +636,7 @@ public class Interfaz extends JFrame {
 			                logica.binario = false;
 			        		 	logica.primo = false;
 			        		 	logica.resultados = false;
+			        		 	logica.memorias = false;
 			                txtPantalla.requestFocus();
 			     	}
 			}
@@ -622,6 +656,7 @@ public class Interfaz extends JFrame {
 	        	logica.binario = false;
 	    		logica.primo = false;
 	    		logica.resultados = false;
+	    		logica.memorias = false;
 	        	txtPantalla.requestFocus();
 			}
 		});
@@ -639,6 +674,7 @@ public class Interfaz extends JFrame {
 	               logica.activado = true;
 	               logica.binario = false;
 	       		   logica.primo = false;
+	       		   logica.memorias = false;
 	               txtPantalla.requestFocus();
 	        	
 	        	if (logica.resultados == true && !txtPantalla.getText().isEmpty()) {
@@ -650,6 +686,7 @@ public class Interfaz extends JFrame {
 	                   logica.binario = false;
 	           		 	logica.primo = false;
 	           		 	logica.resultados = false;
+	           		 	logica.memorias = false;
 	                   txtPantalla.requestFocus();
 	        	}
 			}
@@ -669,6 +706,7 @@ public class Interfaz extends JFrame {
 	                logica.binario = false;
 	        		logica.primo = false;
 	        		logica.resultados = false;
+	        		logica.memorias = false;
 	                txtPantalla.requestFocus();
 	        	}
 			}
@@ -692,6 +730,9 @@ public class Interfaz extends JFrame {
 	        		logica.oper = "division";
 	        		logica.punto = false;
 	        		logica.resultados = false;
+	        		logica.binario = true;
+	        		logica.primo = true;
+	        		logica.memorias = true;
 	        		txtPantalla.requestFocus();
 	        		//logica.activado = false;
 	        	}
@@ -716,6 +757,9 @@ public class Interfaz extends JFrame {
 	        		logica.oper = "multiplicacion";
 	        		logica.punto = false;
 	        		logica.resultados = false;
+	        		logica.binario = true;
+	        		logica.primo = true;
+	        		logica.memorias = true;
 	        		txtPantalla.requestFocus();
 	        		//logica.activado = false;
 	        	}
@@ -740,6 +784,9 @@ public class Interfaz extends JFrame {
 	        		logica.oper = "resta";
 	        		logica.punto = false;
 	        		logica.resultados = false;
+	        		logica.binario = true;
+	        		logica.primo = true;
+	        		logica.memorias = true;
 	        		txtPantalla.requestFocus();
 	        		//logica.activado = false;
 	        	}
@@ -764,6 +811,9 @@ public class Interfaz extends JFrame {
 	        		logica.oper = "suma";
 	        		logica.punto = false;
 	        		logica.resultados = false;
+	        		logica.binario = true;
+	        		logica.primo = true;
+	        		logica.memorias = true;
 	        		txtPantalla.requestFocus();
 	        		//logica.activado = false;
 	        	}
@@ -782,6 +832,9 @@ public class Interfaz extends JFrame {
 	        			logica.resultadoBitacora = (logica.cadena + " = " + logica.cadena);
 	        			logica.bitacora.add(logica.resultadoBitacora);
 	        			Logica.escribirBitacora(logica.bitacora);
+	        			logica.binario = false;
+		        		logica.primo = false;
+		        		logica.memorias = false;
 	        		}else if(logica.oper == "suma") {
 	        			logica.num2 = Double.parseDouble(logica.cadena);
 	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
