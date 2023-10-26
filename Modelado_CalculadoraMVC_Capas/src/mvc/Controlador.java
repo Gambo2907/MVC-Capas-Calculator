@@ -62,6 +62,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		   modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -73,6 +74,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
+	        		 	modelo.memorias = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
 			
@@ -84,6 +86,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		   modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -95,6 +98,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
+	        		 	modelo.memorias = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
        
@@ -106,6 +110,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -117,6 +122,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
+	        		 	modelo.memorias = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
         }
@@ -127,6 +133,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		    modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -137,6 +144,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.activado = true;
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
+	        		 	modelo.memorias = false;
 	        		 	modelo.resultados = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
@@ -149,6 +157,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		   modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -159,6 +168,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.activado = true;
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
+	        		 	modelo.memorias = false;
 	        		 	modelo.resultados = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
@@ -172,6 +182,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
+   		  modelo.memorias = false;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -183,6 +194,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
+	        		 	modelo.memorias = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
         	
@@ -195,6 +207,7 @@ public class Controlador implements ActionListener, KeyListener {
               modelo.activado = true;
               modelo.binario = false;
       		   modelo.primo = false;
+      		   modelo.memorias = false;
               vista.txtPantalla.requestFocus();
        	
   	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -206,6 +219,7 @@ public class Controlador implements ActionListener, KeyListener {
   	                modelo.binario = false;
   	        		 	modelo.primo = false;
   	        		 	modelo.resultados = false;
+  	        		 	modelo.memorias = false;
   	                vista.txtPantalla.requestFocus();
   	     	}
         }
@@ -216,6 +230,7 @@ public class Controlador implements ActionListener, KeyListener {
              modelo.activado = true;
              modelo.binario = false;
      		   modelo.primo = false;
+     		  modelo.memorias = false;
              vista.txtPantalla.requestFocus();
       	
  	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -227,6 +242,7 @@ public class Controlador implements ActionListener, KeyListener {
  	                modelo.binario = false;
  	        		 	modelo.primo = false;
  	        		 	modelo.resultados = false;
+ 	        		 	modelo.memorias = false;
  	                vista.txtPantalla.requestFocus();
  	     	}
          }
@@ -240,6 +256,7 @@ public class Controlador implements ActionListener, KeyListener {
             modelo.activado = true;
             modelo.binario = false;
     		   modelo.primo = false;
+    		   modelo.memorias = false;
             vista.txtPantalla.requestFocus();
      	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -251,6 +268,7 @@ public class Controlador implements ActionListener, KeyListener {
 	                modelo.binario = false;
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
+	        		 	modelo.memorias = false;
 	                vista.txtPantalla.requestFocus();
 	     	}
         }
@@ -261,6 +279,7 @@ public class Controlador implements ActionListener, KeyListener {
                modelo.activado = true;
                modelo.binario = false;
        		   modelo.primo = false;
+       		modelo.memorias = false;
                vista.txtPantalla.requestFocus();
         	
         	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -272,6 +291,7 @@ public class Controlador implements ActionListener, KeyListener {
                    modelo.binario = false;
            		 	modelo.primo = false;
            		 	modelo.resultados = false;
+           		 modelo.memorias = false;
                    vista.txtPantalla.requestFocus();
         	}
            
@@ -284,6 +304,7 @@ public class Controlador implements ActionListener, KeyListener {
         	modelo.binario = false;
     		modelo.primo = false;
     		modelo.resultados = false;
+    		modelo.memorias = false;
         	vista.txtPantalla.requestFocus();
         }
         if(e.getSource() == vista.btnPunto) {
@@ -294,6 +315,7 @@ public class Controlador implements ActionListener, KeyListener {
                 modelo.binario = false;
         		modelo.primo = false;
         		modelo.resultados = false;
+        		modelo.memorias = false;
                 vista.txtPantalla.requestFocus();
         	}
         	
@@ -310,6 +332,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "suma";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		vista.txtPantalla.requestFocus();
         		//modelo.activado = false;
         		
@@ -327,6 +352,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.cadena = "";
         		modelo.oper = "resta";
         		modelo.punto = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		modelo.resultados = false;
         		vista.txtPantalla.requestFocus();
         		//modelo.activado = false;
@@ -347,6 +375,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "multiplicacion";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		vista.txtPantalla.requestFocus();
         		//modelo.activado = false;
         		
@@ -366,6 +397,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "division";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		vista.txtPantalla.requestFocus();
         		//modelo.activado = false;
         	}
@@ -374,10 +408,15 @@ public class Controlador implements ActionListener, KeyListener {
         if(e.getSource()== vista.btnIgual) {
         	if(modelo.activado == true) {
         		if(modelo.oper == "nula") {
+        			
         			vista.txtPantalla.setText(modelo.cadena);
         			modelo.resultadoBitacora = (modelo.cadena + " = " + modelo.cadena);
         			modelo.bitacora.add(modelo.resultadoBitacora);
         			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.memorias = false;
+            		modelo.binario = false;
+            		modelo.primo = false;
+        			modelo.resultados = true;
         		}else if(modelo.oper == "suma") {
         			modelo.num2 = Double.parseDouble(modelo.cadena);
         			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)));
@@ -443,11 +482,16 @@ public class Controlador implements ActionListener, KeyListener {
         			modelo.activado = false;
         			modelo.binario = false;
             		modelo.primo = false;
-            		modelo.memorias = true;
+            		modelo.memorias = false;
         			vista.txtPantalla.requestFocus();
         			modelo.resultados = true;
         			if(modelo.resultado == Double.NaN) {
         				modelo.cadena = "0";
+        				modelo.punto = false;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = true;
         			}
         		}
         		
@@ -547,6 +591,7 @@ public class Controlador implements ActionListener, KeyListener {
             modelo.activado = true;
             modelo.binario = false;
     		modelo.primo = false;
+    		modelo.memorias = false;
     		if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
         		modelo.cadena = "";
         		vista.txtPantalla.setText("");
@@ -556,6 +601,7 @@ public class Controlador implements ActionListener, KeyListener {
                    modelo.binario = false;
            		 	modelo.primo = false;
            		 	modelo.resultados = false;
+           		 	modelo.memorias = false;
                    vista.txtPantalla.requestFocus();
         	}
     		
@@ -569,6 +615,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "multiplicacion";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		//modelo.activado = false;
         		}
         }else if (keyChar == '+') {
@@ -581,6 +630,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "suma";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         	
         		}
         }else if (keyChar == '-') {
@@ -593,6 +645,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "resta";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		
         		}
         }else if (keyChar == '/') {
@@ -605,6 +660,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.oper = "division";
         		modelo.punto = false;
         		modelo.resultados = false;
+        		modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         		
         		}
         } else if(keyChar == '.') {
@@ -613,6 +671,9 @@ public class Controlador implements ActionListener, KeyListener {
                 vista.txtPantalla.setText(modelo.cadena);
                 modelo.punto = true;
                 modelo.resultados = false;
+                modelo.memorias = true;
+        		modelo.binario = true;
+        		modelo.primo = true;
         	}
         	
         }
@@ -633,7 +694,9 @@ public class Controlador implements ActionListener, KeyListener {
         			modelo.bitacora.add(modelo.resultadoBitacora);
         			Modelo.escribirBitacora(modelo.bitacora);
         			modelo.resultados = true;
-        			
+            		modelo.binario = false;
+            		modelo.primo = false;
+        			modelo.memorias = false;
         		}else if(modelo.oper == "suma") {
         			modelo.num2 = Double.parseDouble(modelo.cadena);
         			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)));

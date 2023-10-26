@@ -30,7 +30,7 @@ public class Modelo {
 	public List<String> bitacora = new ArrayList<>();
 	public LinkedList<Double> memoria = new LinkedList<>();
 	public String contenidoComoString;
-	public String nombreArchivo = "C:\\Users\\User\\eclipse-workspace\\Modelado_CalculadoraMVC_Capas\\src\\mvc\\Bitacora.txt";
+	
 	
 	public double operaciones(double num1, double num2, String oper) {
 		switch (oper) {
@@ -90,7 +90,7 @@ public class Modelo {
 	}
 
 	public static void escribirBitacora(List<String>bitacora){
-		String archivoRegistro = "C:\\Users\\User\\eclipse-workspace\\Modelado_CalculadoraMVC_Capas\\src\\mvc\\Bitacora.txt";
+		String archivoRegistro = "C:\\Users\\User\\Documents\\GitHub\\MVC-Capas-Calculator\\Modelado_CalculadoraMVC_Capas\\src\\mvc\\Bitacora.txt";
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(archivoRegistro));
