@@ -1,0 +1,5 @@
+Primo 6 false
+Binario 88.0 = 1011000
+Primo 12 false
+182.0 + 35.0 = 217.0
+Binario 217.0 = 11011001
