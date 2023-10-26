@@ -29,7 +29,7 @@ public class Logica {
 	public List<String> bitacora = new ArrayList<>();
 	public LinkedList<Double> memoria = new LinkedList<>();
 	public String contenidoComoString;
-	public String nombreArchivo = "C:\\Users\\User\\Documents\\GitHub\\MVC-Capas-Calculator\\Modelado_Calculadora_Capas\\src\\capas\\Bitacora.txt";
+	
 	
 	public double operaciones(double num1, double num2, String oper) {
 		switch (oper) {
