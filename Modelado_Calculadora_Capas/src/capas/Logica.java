@@ -20,6 +20,7 @@ public class Logica {
 	public boolean binario;
 	public boolean memorias;
 	public boolean resultados;
+	public boolean constantes;
 	public int numero;
 	String lineas;
 	public String operacion;
@@ -33,18 +34,18 @@ public class Logica {
 	
 	public double operaciones(double num1, double num2, String oper) {
 		switch (oper) {
-        case "suma":
+        case "+":
             return num1 + num2;
            
-        case "resta":
+        case "-":
         	
             return num1 - num2;
             
-        case "multiplicacion":
+        case "*":
         	
             return num1 * num2;
       
-        case "division":
+        case "/":
             if (num2 != 0) {
             	
                 return num1 / num2;
@@ -125,30 +126,6 @@ public class Logica {
     }
 	
 	
-	public void LeerArchivoDeTexto() {
-		String nombreArchivo = "C:\\Users\\User\\Documents\\GitHub\\MVC-Capas-Calculator\\Modelado_Calculadora_Capas\\src\\capas\\Bitacora.txt";
-		try {
-            File archivo = new File(nombreArchivo);
-            FileReader lector = new FileReader(archivo);
-            BufferedReader buffer = new BufferedReader(lector);
-
-            
-            StringBuilder contenido = new StringBuilder();
-
-            while ((lineas = buffer.readLine()) != null) {
-                contenido.append(lineas); // Agrega la línea al contenido
-                contenido.append('\n'); // Agrega un salto de línea
-            }
-
-            // Cierra el archivo después de leerlo
-            buffer.close();
-
-            contenidoComoString = contenido.toString();
-            System.out.print("Contenido del archivo:");
-            System.out.print(contenidoComoString);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-	}
+	
 
 }

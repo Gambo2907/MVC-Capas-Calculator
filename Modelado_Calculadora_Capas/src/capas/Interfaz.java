@@ -5,14 +5,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+
 
 
 
@@ -49,6 +56,9 @@ public class Interfaz extends JFrame {
 	public JFrame ventanaEmergente;
 	public JLabel labeldata;
 	public JPanel panel;
+	public JTable table;
+	public DefaultTableModel model;
+	public  JScrollPane scrollPane;
 	
 	public Interfaz(Logica logica) {
 		this.logica = logica;
@@ -63,14 +73,26 @@ public class Interfaz extends JFrame {
 		contentPane.setLayout(null);
 		
 		ventanaEmergente = new JFrame("Data");
-        ventanaEmergente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //ventanaEmergente.setResizable(false);
+        ventanaEmergente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        ventanaEmergente.setResizable(false);
         ventanaEmergente.setSize(800, 700);
         panel = new JPanel();
         labeldata = new JLabel();
         labeldata.setSize(700, 600);
         panel.add(labeldata);
         ventanaEmergente.add(panel);
+        
+        table = new JTable();
+        model = (DefaultTableModel) table.getModel();
+       
+        
+        model.addColumn("Bitacora");
+        
+        
+       scrollPane = new JScrollPane(table);
+       ventanaEmergente.add(scrollPane);
+
+        ventanaEmergente.pack();
         
 		
 		
@@ -110,13 +132,13 @@ public class Interfaz extends JFrame {
 		        	}
 		    		
 				}else if (keyChar == '*') {
-					if(logica.cadena == "") {
+					if(logica.cadena == "" || logica.cadena == "NaN") {
 		        		logica.activado = false;
 		        		} if(logica.activado==true) {
 		        		logica.num1 = Double.parseDouble(logica.cadena);
 		        		txtPantalla.setText(logica.cadena + "*");
 		        		logica.cadena = "";
-		        		logica.oper = "multiplicacion";
+		        		logica.oper = "*";
 		        		logica.punto = false;
 		        		logica.resultados = false;
 		        		logica.binario = true;
@@ -124,14 +146,14 @@ public class Interfaz extends JFrame {
 		        		logica.memorias = true;
 		        		//logica.activado = false;
 		        		}
-		        }else if (keyChar == '+') {
-					if(logica.cadena == "") {
+		        }else if (keyChar == '+' ) {
+					if(logica.cadena == "" || logica.cadena == "NaN") {
 		        		logica.activado = false;
 		        		} if(logica.activado==true) {
 		        		logica.num1 = Double.parseDouble(logica.cadena);
 		        		txtPantalla.setText(logica.cadena + "+");
 		        		logica.cadena = "";
-		        		logica.oper = "suma";
+		        		logica.oper = "+";
 		        		logica.punto = false;
 		        		logica.resultados = false;
 		        		logica.binario = true;
@@ -139,14 +161,14 @@ public class Interfaz extends JFrame {
 		        		logica.memorias = true;
 		        	
 		        		}
-		        }else if (keyChar == '-') {
-					if(logica.cadena == "") {
+		        }else if (keyChar == '-' ) {
+					if(logica.cadena == "" || logica.cadena == "NaN") {
 		        		logica.activado = false;
 		        		} if(logica.activado==true) {
 		        		logica.num1 = Double.parseDouble(logica.cadena);
 		        		txtPantalla.setText(logica.cadena + "-");
 		        		logica.cadena = "";
-		        		logica.oper = "resta";
+		        		logica.oper = "-";
 		        		logica.punto = false;
 		        		logica.resultados = false;
 		        		logica.binario = true;
@@ -155,13 +177,13 @@ public class Interfaz extends JFrame {
 		        		
 		        		}
 		        }else if (keyChar == '/') {
-					if(logica.cadena == "") {
+					if(logica.cadena == "" || logica.cadena == "NaN") {
 		        		logica.activado = false;
 		        		} if(logica.activado==true) {
 		        		logica.num1 = Double.parseDouble(logica.cadena);
 		        		txtPantalla.setText(logica.cadena + "/");
 		        		logica.cadena = "";
-		        		logica.oper = "division";
+		        		logica.oper = "/";
 		        		logica.punto = false;
 		        		logica.resultados = false;
 		        		logica.binario = true;
@@ -191,88 +213,37 @@ public class Interfaz extends JFrame {
 			public void keyReleased(KeyEvent e) {
 				// TODO Auto-generated method stub
 				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-		        	if(logica.activado == true) {
-		        		if(logica.oper == "nula") {
+					if(logica.activado == true) {
+		        		if(logica.oper != "nula") {
+		        			logica.num2 = Double.parseDouble(logica.cadena);
+		        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
+		        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
+		        			logica.cadena = (String.valueOf(logica.resultado));
+		        			logica.resultadoBitacora = (Double.toString(logica.num1) + logica.oper + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
+		        			logica.bitacora.add(logica.resultadoBitacora);
+		        			Logica.escribirBitacora(logica.bitacora);
+		        			logica.oper = "nula";
+		        			logica.punto = false;
+		        			logica.activado = true;
+		        			logica.binario = false;
+		            		logica.primo = false;
+		            		logica.memorias = false;
+		            		logica.resultados = true;
+		            		logica.constantes = false;
+		        			txtPantalla.requestFocus();
+		        			
+		        		}
+		        		
+		        		else {
 		        			txtPantalla.setText(logica.cadena);
 		        			logica.resultadoBitacora = (logica.cadena + " = " + logica.cadena);
 		        			logica.bitacora.add(logica.resultadoBitacora);
 		        			Logica.escribirBitacora(logica.bitacora);
 		        			logica.resultados = true;
-		        			logica.binario = false;
-			        		logica.primo = false;
-			        		logica.memorias = false;
-		        			
-		        		}else if(logica.oper == "suma") {
-		        			logica.num2 = Double.parseDouble(logica.cadena);
-		        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-		        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-		        			logica.cadena = (String.valueOf(logica.resultado));
-		        			logica.resultadoBitacora = (Double.toString(logica.num1) + " + " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-		        			logica.bitacora.add(logica.resultadoBitacora);
-		        			Logica.escribirBitacora(logica.bitacora);
-		        			logica.oper = "nula";
-		        			logica.punto = false;
-		        			logica.activado = true;
-		        			logica.binario = false;
+		            		logica.binario = false;
 		            		logica.primo = false;
-		            		logica.memorias = false;
-		            		logica.resultados = true;
-		        			
-		        			
-		        		}else if(logica.oper == "resta") {
-		        			logica.num2 = Double.parseDouble(logica.cadena);
-		        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-		        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-		        			logica.resultadoBitacora = (Double.toString(logica.num1) + " - " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-		        			logica.bitacora.add(logica.resultadoBitacora);
-		        			Logica.escribirBitacora(logica.bitacora);
-		        			logica.cadena = (String.valueOf(logica.resultado));
-		        			logica.punto = false;
-		        			logica.oper = "nula";
-		        			logica.activado = true;
-		        			logica.binario = false;
-		            		logica.primo = false;
-		            		logica.memorias = false;
-		            		logica.resultados = true;
-		        			
-		            		
-		        		}else if(logica.oper == "multiplicacion") {
-		        			logica.num2 = Double.parseDouble(logica.cadena);
-		        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-		        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-		        			logica.resultadoBitacora = (Double.toString(logica.num1) + " * " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-		        			logica.bitacora.add(logica.resultadoBitacora);
-		        			Logica.escribirBitacora(logica.bitacora);
-		        			logica.cadena = (String.valueOf(logica.resultado));
-		        			logica.oper = "nula";
-		        			logica.punto = false;
-		        			logica.activado = true;
-		        			logica.binario = false;
-		            		logica.primo = false;
-		            		logica.memorias = false;
-		            		logica.resultados = true;
-		        			
-		            		
-		        		}else if(logica.oper == "division") {
-		        			logica.num2 = Double.parseDouble(logica.cadena);
-		        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-		        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-		        			logica.cadena = (String.valueOf(logica.resultado));
-		        			logica.resultadoBitacora = (Double.toString(logica.num1) + " / " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-		        			logica.bitacora.add(logica.resultadoBitacora);
-		        			Logica.escribirBitacora(logica.bitacora);
-		        			logica.oper = "nula";
-		        			logica.punto = false;
-		        			logica.activado = true;
-		        			logica.binario = false;
-		            		logica.primo = false;
-		            		logica.memorias = false;
-		            		logica.resultados = true;
-		        			if(logica.resultado == Double.NaN) {
-		        				logica.cadena = "0";
-		        			}
+		        			logica.memorias = false;
 		        		}
-		        		
 		        	}
 		        	
 				}else if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
@@ -296,7 +267,7 @@ public class Interfaz extends JFrame {
 		contentPane.add(btnBinario);
 		btnBinario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.primo == false && logica.memorias == false) {
+				if(logica.primo == false && logica.memorias == false && logica.cadena != "NaN" && logica.cadena != "") {
 	        		double parser = Double.parseDouble(logica.cadena);
 	            	logica.numero = (int) parser;
 	            	txtPantalla.setText(logica.decimalABinario(logica.numero));
@@ -319,7 +290,7 @@ public class Interfaz extends JFrame {
 		contentPane.add(btnPrimo);
 		btnPrimo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.binario == false && logica.memorias == false) {
+				if(logica.binario == false && logica.memorias == false && logica.cadena != "NaN" && logica.cadena != "") {
 	        		double parser = Double.parseDouble(logica.cadena);
 	            	logica.numero = (int) parser;
 	            	if(logica.esPrimo(logica.numero) == true) {
@@ -358,9 +329,24 @@ public class Interfaz extends JFrame {
 		contentPane.add(btnData);
 		btnData.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				logica.LeerArchivoDeTexto();
-	        	labeldata.setText(logica.contenidoComoString);
-	        	ventanaEmergente.setVisible(true);
+				try {
+	                BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\User\\Documents\\GitHub\\MVC-Capas-Calculator\\Modelado_Calculadora_Capas\\src\\capas\\Bitacora.txt"));
+	                String line;
+
+	                while ((line = br.readLine()) != null) {
+	                    String[] data = line.split(","); // Suponiendo que los datos están separados por comas
+
+	                    // Agregar una nueva fila a la tabla con los datos del archivo
+	                    model.addRow(data);
+	                    
+	                    
+	                }
+
+	                br.close();
+	            } catch (Exception e1) {
+	                e1.printStackTrace();
+	            }
+				ventanaEmergente.setVisible(true);
 			}
 		});
 		
@@ -719,7 +705,7 @@ public class Interfaz extends JFrame {
 		
 		btnDivision.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.cadena == "") {
+				if(logica.cadena == ""|| logica.cadena == "NaN") {
 	        		logica.activado = false;
 	        	}
 	        	if(logica.activado==true) {
@@ -727,7 +713,7 @@ public class Interfaz extends JFrame {
 	        		logica.num1 = Double.parseDouble(logica.cadena);
 	        		txtPantalla.setText(logica.cadena + "/");
 	        		logica.cadena = "";
-	        		logica.oper = "division";
+	        		logica.oper = "/";
 	        		logica.punto = false;
 	        		logica.resultados = false;
 	        		logica.binario = true;
@@ -746,7 +732,7 @@ public class Interfaz extends JFrame {
 		
 		btnMulti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.cadena == "") {
+				if(logica.cadena == "" || logica.cadena == "NaN") {
 	        		logica.activado = false;
 	        	}
 	        	if(logica.activado==true) {
@@ -754,7 +740,7 @@ public class Interfaz extends JFrame {
 	        		logica.num1 = Double.parseDouble(logica.cadena);
 	        		txtPantalla.setText(logica.cadena + "*");
 	        		logica.cadena = "";
-	        		logica.oper = "multiplicacion";
+	        		logica.oper = "*";
 	        		logica.punto = false;
 	        		logica.resultados = false;
 	        		logica.binario = true;
@@ -773,7 +759,7 @@ public class Interfaz extends JFrame {
 		
 		btnResta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.cadena == "") {
+				if(logica.cadena == ""|| logica.cadena == "NaN") {
 	        		logica.activado = false;
 	        	}
 	        	if(logica.activado==true) {
@@ -781,7 +767,7 @@ public class Interfaz extends JFrame {
 	        		logica.num1 = Double.parseDouble(logica.cadena);
 	        		txtPantalla.setText(logica.cadena + "-");
 	        		logica.cadena = "";
-	        		logica.oper = "resta";
+	        		logica.oper = "-";
 	        		logica.punto = false;
 	        		logica.resultados = false;
 	        		logica.binario = true;
@@ -800,7 +786,7 @@ public class Interfaz extends JFrame {
 		
 		btnSuma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(logica.cadena == "") {
+				if(logica.cadena == ""|| logica.cadena == "NaN") {
 	        		logica.activado = false;
 	        	}
 	        	if(logica.activado==true) {
@@ -808,7 +794,7 @@ public class Interfaz extends JFrame {
 	        		logica.num1 = Double.parseDouble(logica.cadena);
 	        		txtPantalla.setText(logica.cadena + "+");
 	        		logica.cadena = "";
-	        		logica.oper = "suma";
+	        		logica.oper = "+";
 	        		logica.punto = false;
 	        		logica.resultados = false;
 	        		logica.binario = true;
@@ -827,87 +813,36 @@ public class Interfaz extends JFrame {
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(logica.activado == true) {
-	        		if(logica.oper == "nula") {
+	        		if(logica.oper != "nula") {
+	        			logica.num2 = Double.parseDouble(logica.cadena);
+	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
+	        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
+	        			logica.cadena = (String.valueOf(logica.resultado));
+	        			logica.resultadoBitacora = (Double.toString(logica.num1) + logica.oper + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
+	        			logica.bitacora.add(logica.resultadoBitacora);
+	        			Logica.escribirBitacora(logica.bitacora);
+	        			logica.oper = "nula";
+	        			logica.punto = false;
+	        			logica.activado = true;
+	        			logica.binario = false;
+	            		logica.primo = false;
+	            		logica.memorias = false;
+	            		logica.resultados = true;
+	            		logica.constantes = false;
+	        			txtPantalla.requestFocus();
+	        			
+	        		}
+	        		
+	        		else {
 	        			txtPantalla.setText(logica.cadena);
 	        			logica.resultadoBitacora = (logica.cadena + " = " + logica.cadena);
 	        			logica.bitacora.add(logica.resultadoBitacora);
 	        			Logica.escribirBitacora(logica.bitacora);
-	        			logica.binario = false;
-		        		logica.primo = false;
-		        		logica.memorias = false;
-	        		}else if(logica.oper == "suma") {
-	        			logica.num2 = Double.parseDouble(logica.cadena);
-	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-	        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-	        			logica.cadena = (String.valueOf(logica.resultado));
-	        			logica.resultadoBitacora = (Double.toString(logica.num1) + " + " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-	        			logica.bitacora.add(logica.resultadoBitacora);
-	        			Logica.escribirBitacora(logica.bitacora);
-	        			logica.oper = "nula";
-	        			logica.punto = false;
-	        			logica.activado = true;
-	        			logica.binario = false;
-	            		logica.primo = false;
-	            		logica.memorias = false;
-	            		logica.resultados = true;
-	        			txtPantalla.requestFocus();
-	        			
-	        			
-	        		}else if(logica.oper == "resta") {
-	        			logica.num2 = Double.parseDouble(logica.cadena);
-	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-	        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-	        			logica.cadena = (String.valueOf(logica.resultado));
-	        			logica.resultadoBitacora = (Double.toString(logica.num1) + " - " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-	        			logica.bitacora.add(logica.resultadoBitacora);
-	        			Logica.escribirBitacora(logica.bitacora);
-	        			logica.punto = false;
-	        			logica.oper = "nula";
-	        			logica.activado = true;
-	        			logica.binario = false;
-	            		logica.primo = false;
-	            		logica.memorias = false;
-	            		logica.resultados = true;
-	        			txtPantalla.requestFocus();
-	        			
-	        		}else if(logica.oper == "multiplicacion") {
-	        			logica.num2 = Double.parseDouble(logica.cadena);
-	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-	        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-	        			logica.cadena = (String.valueOf(logica.resultado));
-	        			logica.resultadoBitacora = (Double.toString(logica.num1) + " * " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-	        			logica.bitacora.add(logica.resultadoBitacora);
-	        			Logica.escribirBitacora(logica.bitacora);
-	        			logica.oper = "nula";
-	        			logica.punto = false;
-	        			logica.activado = true;
-	        			logica.binario = false;
-	            		logica.primo = false;
-	            		logica.memorias = false;
-	            		logica.resultados = true;
-	        			txtPantalla.requestFocus();
-	        			
-	        		}else if(logica.oper == "division") {
-	        			logica.num2 = Double.parseDouble(logica.cadena);
-	        			txtPantalla.setText(String.valueOf(logica.operaciones(logica.num1, logica.num2, logica.oper)));
-	        			logica.resultado = logica.operaciones(logica.num1, logica.num2, logica.oper);
-	        			logica.cadena = (String.valueOf(logica.resultado));
-	        			logica.resultadoBitacora = (Double.toString(logica.num1) + " / " + Double.toString(logica.num2) + " = " + Double.toString(logica.resultado));
-	        			logica.bitacora.add(logica.resultadoBitacora);
-	        			Logica.escribirBitacora(logica.bitacora);
-	        			logica.oper = "nula";
-	        			logica.punto = false;
-	        			logica.activado = false;
-	        			logica.binario = false;
-	            		logica.primo = false;
-	            		logica.memorias = true;
-	        			txtPantalla.requestFocus();
 	        			logica.resultados = true;
-	        			if(logica.resultado == Double.NaN) {
-	        				logica.cadena = "0";
-	        			}
+	            		logica.binario = false;
+	            		logica.primo = false;
+	        			logica.memorias = false;
 	        		}
-	        		
 	        	}
 				
 			}
@@ -920,7 +855,7 @@ public class Interfaz extends JFrame {
 		
 		btnAvg.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				if(logica.binario == false && logica.primo == false) {
+				if(logica.binario == false && logica.primo == false && logica.cadena != "NaN" && logica.cadena != "") {
 	        		txtPantalla.setText(Double.toString(logica.calcularPromedio()));
 	            	logica.cadena = Double.toString(logica.calcularPromedio());
 	            	logica.memorias = false;
@@ -936,7 +871,7 @@ public class Interfaz extends JFrame {
 		contentPane.add(btnMemoria);
 		btnMemoria.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				if(logica.binario == false && logica.primo == false) {
+				if(logica.binario == false && logica.primo == false && logica.cadena != "NaN" && logica.cadena != "" ) {
 	        		double parser = Double.parseDouble(logica.cadena);
 	            	logica.agregarNumero(parser);
 	            	txtPantalla.setText(logica.cadena + " add to memory");
