@@ -7,7 +7,9 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -44,6 +46,9 @@ public class Vista extends JFrame {
 	public JFrame ventanaEmergente;
 	public JLabel labeldata;
 	public JPanel panel;
+	public JTable table;
+	public DefaultTableModel model;
+	public  JScrollPane scrollPane;
 	public Vista() {
 		
 		contentPane = new JPanel();
@@ -53,8 +58,8 @@ public class Vista extends JFrame {
 		contentPane.setLayout(null);
 		
 		ventanaEmergente = new JFrame("Data");
-        ventanaEmergente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //ventanaEmergente.setResizable(false);
+        ventanaEmergente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        ventanaEmergente.setResizable(false);
         ventanaEmergente.setSize(800, 700);
         panel = new JPanel();
         labeldata = new JLabel();
@@ -62,8 +67,17 @@ public class Vista extends JFrame {
         panel.add(labeldata);
         ventanaEmergente.add(panel);
         
-		
-		
+        table = new JTable();
+        model = (DefaultTableModel) table.getModel();
+       
+        
+        model.addColumn("Bitacora");
+        
+        
+       scrollPane = new JScrollPane(table);
+       ventanaEmergente.add(scrollPane);
+
+        ventanaEmergente.pack();
 		
 		txtPantalla = new JTextField();
 		txtPantalla.setHorizontalAlignment(SwingConstants.RIGHT);
