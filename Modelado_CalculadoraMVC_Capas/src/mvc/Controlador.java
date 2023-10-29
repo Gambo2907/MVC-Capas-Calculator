@@ -66,10 +66,10 @@ public class Controlador implements ActionListener, KeyListener {
 	           modelo.binario = false;
 	   		   modelo.primo = false;
 	   		   modelo.memorias = false;
-	   		  modelo.constantes = false;
+	   		   modelo.operaciones = true;
 	           vista.txtPantalla.requestFocus();
     	
-	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
+	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty() && modelo.oper == "nula") {
 	     		if( !vista.txtPantalla.getText().isEmpty()) {
 	     			modelo.cadena = "";
 		     		vista.txtPantalla.setText("");
@@ -80,12 +80,13 @@ public class Controlador implements ActionListener, KeyListener {
 		        		 	modelo.primo = false;
 		        		 	modelo.resultados = false;
 		        		 	modelo.memorias = false;
-		        		 	//modelo.constantes = false;
+		        		 	modelo.operaciones = true;
 		                vista.txtPantalla.requestFocus();
 	     		}
 	     		
 	             
 	     	}
+	     	
 	           
 	     	
 	     	
@@ -98,7 +99,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.binario = false;
    		   modelo.primo = false;
    		   modelo.memorias = false;
-   		  modelo.constantes = false;
+   		   modelo.operaciones = true;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -111,9 +112,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
 	        		 	modelo.memorias = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     	
 	     	
        
         }
@@ -124,8 +126,8 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.activado = true;
            modelo.binario = false;
    		   modelo.primo = false;
-   		modelo.memorias = false;
-   		modelo.constantes = false;
+   		   modelo.memorias = false;
+   		   modelo.operaciones = true;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -138,9 +140,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
 	        		 	modelo.memorias = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     	
 	     	
         }
         if (e.getSource() == vista.btn4) {
@@ -151,7 +154,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.binario = false;
    		   modelo.primo = false;
    		    modelo.memorias = false;
-   		 modelo.constantes = false;
+   		 modelo.operaciones = true;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -164,9 +167,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.memorias = false;
 	        		 	modelo.resultados = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     
 	     	
         	
         }
@@ -178,7 +182,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.binario = false;
    		   modelo.primo = false;
    		   modelo.memorias = false;
-   		modelo.constantes = false;
+   		modelo.operaciones = true;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -191,9 +195,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.memorias = false;
 	        		 	modelo.resultados = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     	
 	     	
         	
            
@@ -206,7 +211,7 @@ public class Controlador implements ActionListener, KeyListener {
            modelo.binario = false;
    		   modelo.primo = false;
    		  modelo.memorias = false;
-   		modelo.constantes = false;
+   		modelo.operaciones = true;
            vista.txtPantalla.requestFocus();
     	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -219,9 +224,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
 	        		 	modelo.memorias = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     	
 	     	
         }
         if (e.getSource() == vista.btn7) {
@@ -233,7 +239,7 @@ public class Controlador implements ActionListener, KeyListener {
               modelo.binario = false;
       		   modelo.primo = false;
       		   modelo.memorias = false;
-      		 modelo.constantes = false;
+      		 modelo.operaciones = true;
               vista.txtPantalla.requestFocus();
        	
   	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -246,9 +252,10 @@ public class Controlador implements ActionListener, KeyListener {
   	        		 	modelo.primo = false;
   	        		 	modelo.resultados = false;
   	        		 	modelo.memorias = false;
-  	        		 	modelo.constantes = false;
+  	        		 	modelo.operaciones = true;
   	                vista.txtPantalla.requestFocus();
   	     	}
+  	     	
   	     	
         }
         if (e.getSource() == vista.btn8) {
@@ -259,7 +266,7 @@ public class Controlador implements ActionListener, KeyListener {
              modelo.binario = false;
      		   modelo.primo = false;
      		  modelo.memorias = false;
-     		 modelo.constantes = false;
+     		 modelo.operaciones = true;
              vista.txtPantalla.requestFocus();
       	
  	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -272,9 +279,10 @@ public class Controlador implements ActionListener, KeyListener {
  	        		 	modelo.primo = false;
  	        		 	modelo.resultados = false;
  	        		 	modelo.memorias = false;
- 	        		 	modelo.constantes = false;
+ 	        		 	modelo.operaciones = true;
  	                vista.txtPantalla.requestFocus();
  	     	}
+ 	     	
  	     	
          }
         	
@@ -288,7 +296,7 @@ public class Controlador implements ActionListener, KeyListener {
             modelo.binario = false;
     		   modelo.primo = false;
     		   modelo.memorias = false;
-    		   modelo.constantes = false;
+    		   modelo.operaciones = true;
             vista.txtPantalla.requestFocus();
      	
 	     	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -301,9 +309,10 @@ public class Controlador implements ActionListener, KeyListener {
 	        		 	modelo.primo = false;
 	        		 	modelo.resultados = false;
 	        		 	modelo.memorias = false;
-	        		 	modelo.constantes = false;
+	        		 	modelo.operaciones = true;
 	                vista.txtPantalla.requestFocus();
 	     	}
+	     	
 	     	
         }
         if (e.getSource() == vista.btnCero) {
@@ -313,8 +322,8 @@ public class Controlador implements ActionListener, KeyListener {
                modelo.activado = true;
                modelo.binario = false;
        		   modelo.primo = false;
-       		modelo.memorias = false;
-       		modelo.constantes = false;
+       		   modelo.memorias = false;
+       		modelo.operaciones = true;
                vista.txtPantalla.requestFocus();
         	
         	if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -327,7 +336,7 @@ public class Controlador implements ActionListener, KeyListener {
            		 	modelo.primo = false;
            		 	modelo.resultados = false;
            		 modelo.memorias = false;
-           		modelo.constantes = false;
+           		modelo.operaciones = true;
                    vista.txtPantalla.requestFocus();
         	}
         	
@@ -342,7 +351,8 @@ public class Controlador implements ActionListener, KeyListener {
     		modelo.primo = false;
     		modelo.resultados = false;
     		modelo.memorias = false;
-    		modelo.constantes = false;
+    		modelo.operaciones = false;
+    		modelo.oper = "nula";
         	vista.txtPantalla.requestFocus();
         }
         if(e.getSource() == vista.btnPunto) {
@@ -354,9 +364,10 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.primo = false;
         		modelo.resultados = false;
         		modelo.memorias = false;
-        		modelo.constantes = false;
                 vista.txtPantalla.requestFocus();
+        		
         	}
+        	
         	
         }
         if(e.getSource() == vista.btnSuma) {
@@ -364,8 +375,9 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
+        	if(modelo.activado == true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
+        		//modelo.numfijo = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "+");
         		modelo.cadena = "";
         		modelo.oper = "+";
@@ -374,22 +386,76 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
         		modelo.activado = false;
         		vista.txtPantalla.requestFocus();
         	
-        		
-            		
-        		
         	}
+        	else if(modelo.operaciones == true && modelo.oper != "nula") {
+        		if(modelo.oper != "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+            		modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "+");
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "+";
+        			vista.txtPantalla.requestFocus();
+        		}else if(modelo.oper == "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+            			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "+");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "+";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        		}
+    			
+    			
+        	}
+        	
+        	
+        	
+        	
         }
         if(e.getSource() == vista.btnResta) {
-        	//modelo.cadena = (String.valueOf(modelo.resultado));
         	if(modelo.cadena == ""|| modelo.cadena == "NaN") {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "-");
@@ -400,10 +466,65 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.binario = true;
         		modelo.primo = true;
         		modelo.resultados = false;
-        		modelo.constantes = true;
         		vista.txtPantalla.requestFocus();
         		modelo.activado = false;
         		
+        	}
+        	else if(modelo.operaciones == true && modelo.oper != "nula" ) {
+        		if(modelo.oper != "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "-");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "-";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if (modelo.oper == "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "-");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "-";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
+    			
         	}
         	
         }
@@ -412,8 +533,7 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "*");
         		modelo.cadena = "";
@@ -423,11 +543,64 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
         		vista.txtPantalla.requestFocus();
         		modelo.activado = false;
         		
         	}
+        	else if(modelo.operaciones == true && modelo.oper != "nula" ) {
+        		if(modelo.oper != "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "*");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "*";
+        			vista.txtPantalla.requestFocus();
+        		} else if(modelo.oper == "/" && modelo.resultado != Double.NaN) {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "*");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "*";
+            			vista.txtPantalla.requestFocus();
+        			} else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
+        	}
+        	
         	
         }
         if(e.getSource() == vista.btnDivision) {
@@ -435,8 +608,7 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "/");
         		modelo.cadena = "";
@@ -446,10 +618,66 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
         		vista.txtPantalla.requestFocus();
         		modelo.activado = false;
+        		
+        		
+        	}else if(modelo.operaciones == true && modelo.oper != "nula" && modelo.resultado != Double.NaN) {
+        		if(modelo.oper != "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "/");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "/";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if(modelo.oper == "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "/");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "/";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
         	}
+        	
         	
         }
         if(e.getSource() == vista.btnIgual) {
@@ -469,7 +697,7 @@ public class Controlador implements ActionListener, KeyListener {
             		modelo.primo = false;
             		modelo.memorias = false;
             		modelo.resultados = true;
-            		modelo.constantes = false;
+            		modelo.operaciones = false;
         			vista.txtPantalla.requestFocus();
         			
         		}
@@ -483,6 +711,7 @@ public class Controlador implements ActionListener, KeyListener {
             		modelo.binario = false;
             		modelo.primo = false;
         			modelo.memorias = false;
+        			modelo.operaciones = false;
         		}
         	}
         }
@@ -491,7 +720,7 @@ public class Controlador implements ActionListener, KeyListener {
        
         
         if(e.getSource() == vista.btnPrimo) {
-        	if(modelo.binario == false && modelo.memorias == false && modelo.cadena != "NaN" && modelo.cadena != "") {
+        	if(modelo.binario == false && modelo.memorias == false && modelo.cadena != "NaN" && modelo.cadena != "" && modelo.resultado != Double.NaN) {
         		double parser = Double.parseDouble(modelo.cadena);
             	modelo.numero = (int) parser;
             	if(modelo.esPrimo(modelo.numero) == true) {
@@ -500,6 +729,7 @@ public class Controlador implements ActionListener, KeyListener {
             		modelo.activado = false;
             		modelo.binario = true;
             		modelo.primo = true;
+            		modelo.operaciones = false;
             		modelo.cadena = "0";
             		modelo.resultadoBitacora = ("Primo " + Integer.toString(modelo.numero) + " true");
         			modelo.bitacora.add(modelo.resultadoBitacora);
@@ -515,6 +745,7 @@ public class Controlador implements ActionListener, KeyListener {
         			modelo.memorias = true;
             		modelo.binario = false;
             		modelo.primo = true;
+            		modelo.operaciones = false;
             		modelo.cadena = "0";
             		
             	}
@@ -523,7 +754,7 @@ public class Controlador implements ActionListener, KeyListener {
         	
         }
         if(e.getSource() == vista.btnBinario) {
-        	if(modelo.primo == false && modelo.memorias == false && modelo.cadena != "NaN" && modelo.cadena != "") {
+        	if(modelo.primo == false && modelo.memorias == false && modelo.cadena != "NaN" && modelo.cadena != "" && modelo.resultado != Double.NaN) {
         		double parser = Double.parseDouble(modelo.cadena);
             	modelo.numero = (int) parser;
             	vista.txtPantalla.setText(modelo.decimalABinario(modelo.numero));
@@ -534,13 +765,14 @@ public class Controlador implements ActionListener, KeyListener {
             	modelo.binario = true;
             	modelo.primo = false;
             	modelo.memorias = false;
+            	modelo.operaciones = false;
         		modelo.cadena = "0";
         		vista.txtPantalla.requestFocus();
         	}
         	
         }
         if(e.getSource() == vista.btnMemoria) {
-        	if(modelo.binario == false && modelo.primo == false && modelo.cadena != "NaN" && modelo.cadena != "") {
+        	if(modelo.binario == false && modelo.primo == false && modelo.cadena != "NaN" && modelo.cadena != "" && modelo.resultado != Double.NaN) {
         		double parser = Double.parseDouble(modelo.cadena);
             	modelo.agregarNumero(parser);
             	vista.txtPantalla.setText(modelo.cadena + " add");
@@ -548,12 +780,13 @@ public class Controlador implements ActionListener, KeyListener {
             	modelo.binario = false;
             	modelo.primo = false;
             	modelo.activado = true;
+            	modelo.operaciones = false;
             	vista.txtPantalla.requestFocus();
         	}
         	
         }
         if(e.getSource() == vista.btnAvg) {
-        	if(modelo.binario == false && modelo.primo == false && modelo.cadena != "NaN" && modelo.cadena != "") {
+        	if(modelo.binario == false && modelo.primo == false && modelo.cadena != "NaN" && modelo.cadena != "" && modelo.resultado != Double.NaN) {
         		vista.txtPantalla.setText(Double.toString(modelo.calcularPromedio()));
         		modelo.cadena = "";
             	modelo.cadena = Double.toString(modelo.calcularPromedio());
@@ -561,6 +794,7 @@ public class Controlador implements ActionListener, KeyListener {
             	modelo.memorias = false;
             	modelo.binario = false;
             	modelo.primo = false;
+            	modelo.operaciones = false;
             	vista.txtPantalla.requestFocus();
         	}
         	
@@ -603,6 +837,7 @@ public class Controlador implements ActionListener, KeyListener {
             modelo.binario = false;
     		modelo.primo = false;
     		modelo.memorias = false;
+    		modelo.operaciones =true;
     		if (modelo.resultados == true && !vista.txtPantalla.getText().isEmpty()) {
         		modelo.cadena = "";
         		vista.txtPantalla.setText("");
@@ -613,16 +848,16 @@ public class Controlador implements ActionListener, KeyListener {
            		 	modelo.primo = false;
            		 	modelo.resultados = false;
            		 	modelo.memorias = false;
-                   vista.txtPantalla.requestFocus();
+           		 	modelo.operaciones = true;
+                   
         	}
     		
 		}else if (keyChar == '*') {
-			if(modelo.cadena == "" || modelo.cadena == "NaN") {
+			if(modelo.cadena == ""|| modelo.cadena == "NaN") {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "*");
         		modelo.cadena = "";
@@ -632,18 +867,70 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
-        		vista.txtPantalla.requestFocus();
         		modelo.activado = false;
         		
+        		
+        	}else if(modelo.operaciones == true && modelo.oper != "nula" && modelo.resultado != Double.NaN) {
+        		if(modelo.oper != "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "*");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "*";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if(modelo.oper == "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "*");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "*";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
         	}
         }else if (keyChar == '+') {
-        	if(modelo.cadena == "" || modelo.cadena == "NaN") {
+        	if(modelo.cadena == ""|| modelo.cadena == "NaN") {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "+");
         		modelo.cadena = "";
@@ -653,18 +940,72 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
-        		vista.txtPantalla.requestFocus();
+        		
         		modelo.activado = false;
         		
+        		
+        	}else if(modelo.operaciones == true && modelo.oper != "nula" && modelo.resultado != Double.NaN) {
+        		if(modelo.oper != "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "+");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "+";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if(modelo.oper == "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "+");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "+";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
         	}
+        	
         }else if (keyChar == '-') {
-        	if(modelo.cadena == "" || modelo.cadena == "NaN") {
+        	if(modelo.cadena == ""|| modelo.cadena == "NaN") {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "-");
         		modelo.cadena = "";
@@ -674,20 +1015,72 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
-        		vista.txtPantalla.requestFocus();
+        		
         		modelo.activado = false;
         		
+        		
+        	}else if(modelo.operaciones == true && modelo.oper != "nula" && modelo.resultado != Double.NaN) {
+        		if(modelo.oper != "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "-");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "-";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if(modelo.oper == "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "-");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "-";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
         	}
         		
-        		
         }else if (keyChar == '/') {
-        	if(modelo.cadena == "" || modelo.cadena == "NaN") {
+        	if(modelo.cadena == ""|| modelo.cadena == "NaN") {
         		modelo.cadena = "";
         		modelo.activado = false;
         	}
-        	if(modelo.activado==true) {
-        		
+        	if(modelo.activado==true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "/");
         		modelo.cadena = "";
@@ -697,10 +1090,64 @@ public class Controlador implements ActionListener, KeyListener {
         		modelo.memorias = true;
         		modelo.binario = true;
         		modelo.primo = true;
-        		modelo.constantes = true;
         		vista.txtPantalla.requestFocus();
         		modelo.activado = false;
         		
+        		
+        	}else if(modelo.operaciones == true && modelo.oper != "nula" && modelo.resultado != Double.NaN) {
+        		if(modelo.oper != "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "/");
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			modelo.num1 = modelo.resultado;
+        			modelo.cadena = "";
+        			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+        			modelo.bitacora.add(modelo.resultadoBitacora);
+        			Modelo.escribirBitacora(modelo.bitacora);
+        			modelo.operaciones = false;
+        			modelo.punto = false;
+        			modelo.activado = true;
+        			modelo.binario = false;
+            		modelo.primo = false;
+            		modelo.memorias = false;
+            		modelo.resultados = true;
+            		modelo.operaciones = false;
+            		modelo.oper = "/";
+        			vista.txtPantalla.requestFocus();
+        		}
+        		else if(modelo.oper == "/") {
+        			modelo.num2 = Double.parseDouble(modelo.cadena);
+        			modelo.resultado = modelo.operaciones(modelo.num1, modelo.num2, modelo.oper);
+        			if(modelo.num2 != 0) {
+        				vista.txtPantalla.setText(String.valueOf(modelo.operaciones(modelo.num1, modelo.num2, modelo.oper)) + "/");
+            			modelo.num1 = modelo.resultado;
+            			modelo.cadena = "";
+            			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
+            			modelo.bitacora.add(modelo.resultadoBitacora);
+            			Modelo.escribirBitacora(modelo.bitacora);
+            			modelo.operaciones = false;
+            			modelo.punto = false;
+            			modelo.activado = true;
+            			modelo.binario = false;
+                		modelo.primo = false;
+                		modelo.memorias = false;
+                		modelo.resultados = true;
+                		modelo.operaciones = false;
+                		modelo.oper = "/";
+            			vista.txtPantalla.requestFocus();
+        			}else {
+        				modelo.cadena = "";
+        				vista.txtPantalla.setText("NaN");
+        				modelo.punto = true;
+            			modelo.activado = false;
+            			modelo.binario = true;
+                		modelo.primo = true;
+                		modelo.memorias = false;
+                		modelo.resultados = false;
+                		modelo.operaciones = false;
+        			}
+        			
+        		}
         	}
         } else if(keyChar == '.') {
         	if (!modelo.punto == true && !vista.txtPantalla.getText().isEmpty()) {
@@ -740,7 +1187,7 @@ public class Controlador implements ActionListener, KeyListener {
             		modelo.primo = false;
             		modelo.memorias = false;
             		modelo.resultados = true;
-            		modelo.constantes = false;
+            		modelo.operaciones = false;
         			vista.txtPantalla.requestFocus();
         			
         		}
@@ -754,6 +1201,7 @@ public class Controlador implements ActionListener, KeyListener {
             		modelo.binario = false;
             		modelo.primo = false;
         			modelo.memorias = false;
+        			modelo.operaciones = false;
         		}
         	}
 		
@@ -767,6 +1215,7 @@ public class Controlador implements ActionListener, KeyListener {
     		modelo.primo = false;
     		modelo.memorias = false;
     		modelo.resultados = false;
+    		modelo.operaciones = false;
 		}
 		// TODO Auto-generated method stub
 		

@@ -13,7 +13,7 @@ import java.util.List;
 import javax.swing.DefaultListModel;
 
 public class Modelo {
-	public double num1, resultado, num2;
+	public double num1, resultado, num2, numfijo;
 	public String oper = "nula", cadena = "0";
 	public boolean activado = true;
 	public boolean punto;
@@ -21,7 +21,7 @@ public class Modelo {
 	public boolean binario;
 	public boolean memorias;
 	public boolean resultados;
-	public boolean constantes;
+	public boolean operaciones;
 	public int numero;
 	String lineas;
 	public String operacion;
@@ -35,19 +35,20 @@ public class Modelo {
 	public double operaciones(double num1, double num2, String oper) {
 		switch (oper) {
         case "+":
+        	numfijo = num1;
             return num1 + num2;
            
         case "-":
-        	
+        	numfijo = num1;
             return num1 - num2;
             
         case "*":
-        	
+        	numfijo = num1;
             return num1 * num2;
       
         case "/":
             if (num2 != 0) {
-            	
+            	numfijo = num1;
                 return num1 / num2;
             }
             return Double.NaN; // Handle division by zero
