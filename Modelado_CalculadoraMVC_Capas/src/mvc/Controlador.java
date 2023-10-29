@@ -377,7 +377,6 @@ public class Controlador implements ActionListener, KeyListener {
         	}
         	if(modelo.activado == true && modelo.oper == "nula") {
         		modelo.num1 = Double.parseDouble(modelo.cadena);
-        		//modelo.numfijo = Double.parseDouble(modelo.cadena);
         		vista.txtPantalla.setText(modelo.cadena + "+");
         		modelo.cadena = "";
         		modelo.oper = "+";
@@ -632,7 +631,6 @@ public class Controlador implements ActionListener, KeyListener {
         			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
         			modelo.bitacora.add(modelo.resultadoBitacora);
         			Modelo.escribirBitacora(modelo.bitacora);
-        			modelo.operaciones = false;
         			modelo.punto = false;
         			modelo.activado = true;
         			modelo.binario = false;
@@ -653,7 +651,6 @@ public class Controlador implements ActionListener, KeyListener {
             			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
             			modelo.bitacora.add(modelo.resultadoBitacora);
             			Modelo.escribirBitacora(modelo.bitacora);
-            			modelo.operaciones = false;
             			modelo.punto = false;
             			modelo.activado = true;
             			modelo.binario = false;
@@ -1125,7 +1122,6 @@ public class Controlador implements ActionListener, KeyListener {
             			modelo.resultadoBitacora = (Double.toString(modelo.numfijo) + modelo.oper + Double.toString(modelo.num2) + " = " + Double.toString(modelo.resultado));
             			modelo.bitacora.add(modelo.resultadoBitacora);
             			Modelo.escribirBitacora(modelo.bitacora);
-            			modelo.operaciones = false;
             			modelo.punto = false;
             			modelo.activado = true;
             			modelo.binario = false;
